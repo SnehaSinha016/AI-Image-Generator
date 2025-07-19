@@ -67,7 +67,7 @@ const Home = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:8080/api/v1/post');
+        const response = await fetch('https://ai-image-generator-1-45n9.onrender.com/api/v1/post');
         if (response.ok) {
           const result = await response.json();
 

@@ -54,7 +54,7 @@ Start the backend server:
 npm start
 ```
 
-Runs on: `http://localhost:8080`
+Runs on: `https://ai-image-generator-1-45n9.onrender.com`
 
 ---
 
