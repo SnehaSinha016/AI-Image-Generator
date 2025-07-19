@@ -4,6 +4,9 @@
 AI Image Generator is a full-stack web app that allows users to generate AI-powered images using prompts. It leverages the Stability AI API to generate images (via Stable Diffusion) and allows users to share them with the community.
 
 ---
+## Live Demo
+- 🔗 Frontend: [https://your-frontend-site.vercel.app](https://your-frontend-site.vercel.app)
+- 🔗 Backend API: [https://ai-image-generator-1-45n9.onrender.com](https://ai-image-generator-1-45n9.onrender.com)
 
 ## Features
 
