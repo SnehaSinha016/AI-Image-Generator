@@ -69,7 +69,7 @@ npm install
 npm run dev
 ```
 
-Runs on: `http://localhost:5173`
+Runs on: `https://ai-image-generator-ee5y.vercel.app/`
 
 ---
 
