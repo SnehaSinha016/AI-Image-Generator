@@ -20,13 +20,14 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch(`https://ai-image-generator-1-45n9.onrender.com/api/v1/stability`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ prompt: form.prompt }),
-        });
+       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/stability`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ prompt: form.prompt }),
+});
+      
         const data = await response.json();
 
         if (data.photo?.startsWith('data:image/') || data.photo?.startsWith('http')) {
