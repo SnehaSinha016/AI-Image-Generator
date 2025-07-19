@@ -6,6 +6,9 @@ import postRoutes from './routes/postRoutes.js'
 import stability from './routes/stability.js'
   dotenv.config();
   const app=express();
+  const PORT = process.env.PORT || 8000;
+
+
   app.use(cors());
   app.use(express.json({limit:'50mb'}));
   app.use('/api/v1/post',postRoutes);
@@ -16,7 +19,7 @@ import stability from './routes/stability.js'
   const startserver=async()=>{
     try{
        await connectDB(process.env.MongoDB_url);
-        app.listen(8080,()=>console.log(`Server has started on port http://localhost:8080`));
+      app.listen(PORT, () => console.log(`Server running on port http://localhost:${PORT}`));
     }
     catch{
         (err)=>console.log('error:',err.message);
