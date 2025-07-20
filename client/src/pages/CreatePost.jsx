@@ -50,7 +50,7 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch(`https://ai-image-generator-1-45n9.onrender.com/api/v1/post`, {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/post`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
