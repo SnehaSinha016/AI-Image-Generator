@@ -22,6 +22,13 @@ import stability from './routes/stability.js'
   methods: ['GET', 'POST'],
   credentials: true,
 }));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
   app.use(express.json({limit:'50mb'}));
   app.use('/api/v1/post',postRoutes);
   app.use('/api/v1/stability',stability);
