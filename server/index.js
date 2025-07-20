@@ -10,7 +10,7 @@ import stability from './routes/stability.js'
   const PORT = process.env.PORT || 8000;
   app.use(cors(
     {
-      origin:'https://ai-image-generator-ee5y.vercel.app/',
+      origin:'https://ai-image-generator-fmfg-git-main-snehasinha016s-projects.vercel.app/',
       methods:['GET','POST']
     }
   ));
