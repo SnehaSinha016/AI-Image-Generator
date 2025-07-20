@@ -8,7 +8,12 @@ import stability from './routes/stability.js'
   dotenv.config();
   const app=express();
   const PORT = process.env.PORT || 8000;
-  app.use(cors());
+  app.use(cors(
+    {
+      origin:'https://ai-image-generator-ee5y.vercel.app/',
+      methods:['GET','POST']
+    }
+  ));
   app.use(express.json({limit:'50mb'}));
   app.use('/api/v1/post',postRoutes);
   app.use('/api/v1/stability',stability);
