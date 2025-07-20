@@ -8,12 +8,20 @@ import stability from './routes/stability.js'
   dotenv.config();
   const app=express();
   const PORT = process.env.PORT || 8000;
-  app.use(cors(
-    {
-      origin:'https://ai-image-generator-fmfg-git-main-snehasinha016s-projects.vercel.app',
-      methods:['GET','POST']
+  const allowedOrigins = [
+  'https://ai-image-generator-fmfg-git-main-snehasinha016s-projects.vercel.app',
+];
+  app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS: ' + origin));
     }
-  ));
+  },
+  methods: ['GET', 'POST'],
+  credentials: true,
+}));
   app.use(express.json({limit:'50mb'}));
   app.use('/api/v1/post',postRoutes);
   app.use('/api/v1/stability',stability);
