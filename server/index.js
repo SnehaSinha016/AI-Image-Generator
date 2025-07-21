@@ -40,9 +40,7 @@ app.use((req, res, next) => {
        await connectDB(process.env.MongoDB_url);
       app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
     }
-    catch{
-        (err)=>console.log('error:',err.message);
-    }
-    
+    catch(err){console.error('error starting server:',err.message);
+    } 
   };
   startserver();
