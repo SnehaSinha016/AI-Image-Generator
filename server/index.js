@@ -9,7 +9,7 @@ import stability from './routes/stability.js'
   const app=express();
   const PORT = process.env.PORT || 8000;
   const allowedOrigins = [
-  'https://ai-image-generator-fmfg-git-main-snehasinha016s-projects.vercel.app',
+  'https://ai-image-generator-fmfg.vercel.app/',
 ];
   app.use(cors({
   origin: function (origin, callback) {
@@ -19,7 +19,7 @@ import stability from './routes/stability.js'
       callback(new Error('Not allowed by CORS: ' + origin));
     }
   },
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST','OPTIONS'],
   credentials: true,
 }));
 app.use((req, res, next) => {
