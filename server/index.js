@@ -9,7 +9,7 @@ import stability from './routes/stability.js'
   const app=express();
   const PORT = process.env.PORT || 8000;
   const allowedOrigins = [
-  'https://ai-image-generator-fmfg.vercel.app/',
+  'https://ai-image-generator-fmfg.vercel.app',
 ];
   app.use(cors({
   origin: function (origin, callback) {
