@@ -5,7 +5,7 @@ AI Image Generator is a full-stack web app that allows users to generate AI-powe
 
 ---
 ## Live Demo
-- 🔗 Frontend: [https://your-frontend-site.vercel.app](https://your-frontend-site.vercel.app)
+- 🔗 Frontend: [https://ai-image-generator-ee5y.vercel.app/](https://ai-image-generator-ee5y.vercel.app/)
 - 🔗 Backend API: [https://ai-image-generator-1-45n9.onrender.com](https://ai-image-generator-1-45n9.onrender.com)
 
 ## Features
