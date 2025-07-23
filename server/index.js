@@ -7,7 +7,7 @@ import postRoutes from './routes/postRoutes.js'
 import stability from './routes/stability.js'
   dotenv.config();
   const app=express();
-  const PORT = process.env.PORT || 8000;
+  const PORT = process.env.PORT;
   const allowedOrigins = [
   'https://ai-image-generator-ee5y.vercel.app',
 ];
